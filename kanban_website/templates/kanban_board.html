@@ -1,0 +1,66 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css') }}">
+</head>
+          <div class="container">
+              <div class="lcolumn" style="background-color: lightblue;">
+                <h2 style="margin-left: 110px;"> TO DO </h2>
+                <div class="tasklist" >
+                  {% for task in user.tasks %}
+                  {% if task.stat == "todo" %}
+                    <div class="taskbox">
+        
+                        <h3>{{task.title}}</h3>
+                        <p>{{task.descr}}</p>
+                        <button type="submit" class="btn btn-secondary" style="margin-right: 10px; margin-left: 30px;" onClick="moveTask({{task.id }}, 'doing')">Doing</button>
+                        <button type="submit" class="btn btn-success" style="margin-right: 10px;" onClick="moveTask({{task.id }}, 'done')">Done</button>
+                        <button type="submit" class="btn btn-danger" onClick="deleteTask({{task.id }})">Delete</button>
+
+                    </div>
+                  {% endif %}
+                  {% endfor %}  
+                </div>
+              </div>
+
+              <div class="mcolumn">
+                <h2 style="margin-left: 110px;"> DOING </h2>
+                <div class="tasklist" >
+                  {% for task in user.tasks %}
+                  {% if task.stat == "doing" %}
+                    <div class="taskbox" >
+
+                        <h3>{{task.title}}</h3>
+                        <p>{{task.descr}}</p>
+                        <button type="submit" class="btn btn-primary" style="margin-right: 10px; margin-left: 30px;" onClick="moveTask({{task.id }}, 'todo')">To Do</button>
+                        <button type="submit" class="btn btn-success" style="margin-right: 10px;" onClick="moveTask({{task.id }}, 'done')">Done</button>
+                        <button type="submit" class="btn btn-danger" onClick="deleteTask({{task.id }})">Delete</button>
+
+                    </div>
+                  {% endif %}
+                  {% endfor %}  
+                </div>
+              </div>
+              <div class="rcolumn" style="height: 2000px;">
+                <h2 style="margin-left: 110px; margin-top: 10px;"> DONE </h2>
+                <div class="tasklist" >
+                  {% for task in user.tasks %}
+                  {% if task.stat == "done" %}
+                    <div class="taskbox">
+        
+                        <h3>{{task.title}}</h3>
+                        <p>{{task.descr}}</p>
+                        <button type="submit" class="btn btn-primary" style="margin-right: 10px; margin-left: 30px;" onClick="moveTask({{task.id }}, 'todo')">To Do</button>
+                        <button type="submit" class="btn btn-secondary" style="margin-right: 10px;" onClick="moveTask({{task.id }}, 'doing')">Doing</button>
+                        <button type="submit" class="btn btn-danger" onClick="deleteTask({{task.id }})">Delete</button>
+                    </div>
+                  {% endif %}
+                  {% endfor %}  
+                </div>
+              </div>
+           </div>
+  
+  
+{% endblock %}

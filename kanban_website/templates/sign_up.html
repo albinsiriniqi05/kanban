@@ -1,0 +1,68 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
+content %}
+
+<form method="POST">
+  <br>
+  <br>
+  <h3 align="center">Sign Up</h3>
+  <div class="sign_up_email" style="color:deeppink;">
+    <label for="email" style="margin-left:5px;">Email Address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="Enter email"
+      style="border-radius: 20px; padding: 20px;"
+    />
+  </div>
+  <div class="sign_up_fName" style="color:deeppink;">
+    <label for="firstName" style="margin-left:5px;">First Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="firstName"
+      name="firstName"
+      placeholder="Enter your first name"
+      style="border-radius: 20px; padding: 20px;"
+    />
+  </div>
+
+  <div class="sign_up_lName" style="color:deeppink;">
+    <label for="lastName" style="margin-left:5px;">Last Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="lastName"
+      name="lastName"
+      placeholder="Enter your last name"
+      style="border-radius: 20px; padding: 20px;"
+    />
+  </div>
+
+  <div class="sign_up_password" style="color:deeppink;">
+    <label for="password1" style="margin-left:5px;">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password1"
+      name="password1"
+      placeholder="Enter password"
+      style="border-radius: 20px; padding: 20px;"
+    />
+  </div>
+  <div class="sign_up_password_conf" style="color:deeppink;">
+    <label for="password2" style="margin-left:5px;">Confirm Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password2"
+      name="password2"
+      placeholder="Re-type password"
+      style="border-radius: 20px; padding: 20px;"
+    />
+  </div>
+  <br />
+  <button type="submit" style="margin-left: 500px; border-radius: 25px;" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

@@ -1,0 +1,63 @@
+.lcolumn {
+    background-color:rgb(245, 238, 238);
+    flex: 33.33%;
+    width: 100%;
+    height: 2000px;
+    padding: 20px;
+    margin: 0px;
+    text-align: left;
+}
+.mcolumn {
+  background-color:rgb(240, 245, 219);
+  flex: 33.33%;
+  width: 100%;
+  height: 2000px;
+  padding: 20px;
+  margin: 0px;
+  text-align: left;
+}
+
+.rcolumn {
+  background-color:rgb(217, 245, 217);
+  flex: 33.33%;
+  width: 100%;
+  height: 2000px;
+  padding: 10px;
+  margin: 0px;
+  text-align: left;
+}
+.container {
+   display: flex;
+   padding: 10px
+}	
+
+.close {
+  background-color: white;
+}
+
+.taskbox{
+  padding: 15px;
+  margin: 10px;
+  background-color:rgb(41, 41, 41);
+  height: 100%;
+  border-radius: 5px;
+}
+
+.tasklist{
+  color:rgba(216, 191, 216, 0)
+}
+
+h1 {
+  color: rgb(41, 41, 41);
+  font-size: 50px;
+}
+h2 {
+  color: rgb(41, 41, 41);
+  font-family: sans-serif;
+}
+h3 {
+  color: white;
+}
+p {
+  color: white;  
+}

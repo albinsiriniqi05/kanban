@@ -1,0 +1,64 @@
+{% extends "base.html" %} 
+{% block title %}Add your tasks{% endblock %} 
+
+
+{% block content %}
+
+<br>
+
+<h1>Hello, {{user.first_name}}</h1>
+
+<br>
+
+<h3>Please add your task in the form below:</h3>
+
+
+
+<form method="POST">
+  <br>
+
+  <div class="task-title" style="color: deeppink;">
+    <label for="title" style="margin-left:5px;">Task Title</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      name="title"
+      placeholder="Enter your task title"
+      style="border-radius: 20px; padding: 20px;"
+    />
+  </div>
+
+
+  <div class="task-description" style="color: deeppink;">
+    <label for="descr" style="margin-left:5px;">Description</label>
+    <input
+      type="text"
+      class="form-control"
+      id="descr"
+      name="descr"
+      placeholder="Enter Description"
+      style="border-radius: 20px; padding: 20px;"
+    />
+  </div>
+  <div class="task-status" style="color: deeppink;">
+    <label for="stat" style="margin-left:5px;"> Status</label>
+    <select
+      class="form-control"
+      id="stat"
+      name="stat"
+      style="border-radius: 20px; padding: 6px;"
+    > 
+    <option value="todo">To Do</option>
+    <option value="doing">Doing</option>
+    <option value="done">Done</option>
+    </select>
+  </div>
+  <br />
+  <div align ="center">
+    <button type="submit" class="btn btn-primary">Add Task</button>
+  </div>
+</form>
+
+{% endblock %}
+
