@@ -12,7 +12,10 @@ def create_app(test_config=None):
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'hjshjhdjah'
     #app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+    #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+    app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://xjuggscflshuxc:5b607e1fa0f5912a337db154f7f8760e4dca301bcd2efc7fad9946388bcf577a@ec2-3-223-242-224.compute-1.amazonaws.com:5432/deav24ec3in2m9"
+
+    
     if test_config:
         app.config.update(test_config)
 
