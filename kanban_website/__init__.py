@@ -13,7 +13,7 @@ def create_app(test_config=None):
     app.config['SECRET_KEY'] = 'hjshjhdjah'
     #app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
-    app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://xqlmzeesapexdx:5062db7da0a44e1c6220bc2a4e710e55aadb58bded35e931602f3d5e64c698d4@ec2-34-199-68-114.compute-1.amazonaws.com:5432/d4k24t0nnhua7k"
+    app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://saqikbnvtomckq:bde25f9e28a868fb96bf8f4eb7220fedee8534867ffe11e0c25fa5f42272488e@ec2-3-92-98-129.compute-1.amazonaws.com:5432/daj4fnl5ivlfig"
 
     
     if test_config:
