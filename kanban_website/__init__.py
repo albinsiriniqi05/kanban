@@ -11,9 +11,9 @@ DB_NAME = "database.db"
 def create_app(test_config=None):
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'hjshjhdjah'
-    #app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
-    #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
-    app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://saqikbnvtomckq:bde25f9e28a868fb96bf8f4eb7220fedee8534867ffe11e0c25fa5f42272488e@ec2-3-92-98-129.compute-1.amazonaws.com:5432/daj4fnl5ivlfig"
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+    #app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://saqikbnvtomckq:bde25f9e28a868fb96bf8f4eb7220fedee8534867ffe11e0c25fa5f42272488e@ec2-3-92-98-129.compute-1.amazonaws.com:5432/daj4fnl5ivlfig"
 
     
     if test_config:
